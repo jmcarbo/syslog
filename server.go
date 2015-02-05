@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 	"unicode"
-	"fmt"
+
 )
 
 type Server struct {
@@ -111,7 +111,7 @@ func (s *Server) receiver(c net.PacketConn) {
 			return
 		}
 		pkt := buf[:n]
-		fmt.Printf("------> %s\n", string(pkt))
+		
 
 		m := new(Message)
 		m.Source = addr
